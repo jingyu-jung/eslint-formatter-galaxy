@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: var(--color-canvas-default);
+  overflow-x: hidden;
+}
+
+@layer base {
+  :root {
+    /* --background: 0 0% 100%;
+    --foreground: 215 14% 16%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 14% 16%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 14% 16%;
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 20% 98%;
+    --secondary-foreground: 215 14% 16%;
+    --muted: 210 20% 98%;
+    --muted-foreground: 215 14% 45%;
+    --accent: 212 100% 43%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 18% 87%;
+    --input: 210 18% 87%;
+    --ring: 215 14% 16%; */
+    --background: 222 47% 11%;
+    --foreground: 0 0% 100%;
+    --card: 222 47% 11%;
+    --card-foreground: 0 0% 100%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 212 100% 47%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217 19% 27%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 217 19% 27%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 217 19% 27%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 217 19% 27%;
+    --input: 217 19% 27%;
+    --ring: 212 100% 47%;
+
+    --radius: 0.5rem;
+    --color-btn-primary-bg: 142 76% 36%;
+    --color-btn-primary-text: 0 0% 100%;
+    --color-btn-primary-hover-bg: 142 76% 34%;
+    --color-btn-primary-disabled-bg: 142 40% 70%;
+    --color-btn-border: 0 0% 0% / 0.15;
+    --color-shadow-small: 0 1px 0 0 0% 0% / 0.04;
+
+    /* GitHub Copilot specific colors */
+    /* --color-canvas-default: #ffffff;
+    --color-canvas-subtle: #f6f8fa;
+    --color-border-default: #d0d7de;
+    --color-fg-default: #24292f;
+    --color-fg-muted: #57606a;
+    --color-header-text: #24292f;
+    --color-danger-fg: #cf222e;
+    --color-danger-subtle: #ffebe9;
+    --color-attention-fg: #9a6700;
+    --color-attention-subtle: #fff8c5;
+    --color-success-fg: #1a7f37;
+    --color-success-subtle: #dafbe1;
+    --color-accent-fg: #0969da;
+    --color-accent-subtle: #ddf4ff; */
+    --color-canvas-default: #0d1117;
+    --color-canvas-subtle: #161b22;
+    --color-border-default: #30363d;
+    --color-fg-default: #c9d1d9;
+    --color-fg-muted: #8b949e;
+    --color-header-text: #f0f6fc;
+    --color-danger-fg: #f85149;
+    --color-danger-subtle: #da3633;
+    --color-attention-fg: #d29922;
+    --color-attention-subtle: #9e6a03;
+    --color-success-fg: #3fb950;
+    --color-success-subtle: #238636;
+    --color-accent-fg: #58a6ff;
+    --color-accent-subtle: #1f6feb;
+
+    --color-danger-emphasis: #cf222e;
+    --color-attention-emphasis: #9a6700;
+    --color-success-emphasis: #1a7f37;
+    --color-danger-muted: rgba(207, 34, 46, 0.1); /* Softer red background */
+    --color-attention-muted: rgba(
+      154,
+      103,
+      0,
+      0.1
+    ); /* Softer yellow background */
+    --color-fg-on-emphasis: #ffffff; /* White text for emphasis backgrounds */
+
+    /* Chart colors */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+}
