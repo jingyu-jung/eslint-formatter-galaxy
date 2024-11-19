@@ -1,0 +1,7 @@
+# 모든 파일 제외
+*
+
+# 포함할 파일
+!dist/index.html
+!package.json
+!index.js
