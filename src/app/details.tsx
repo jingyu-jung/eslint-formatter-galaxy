@@ -16,18 +16,16 @@ import {
 } from "@/components/ui/pagination";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  EslintRulesMeta,
-  EslintResults,
-  ErrorEslintResults,
-  WarningEslintResults,
-} from "@/formatter/config";
+import { ErrorEslintResults, WarningEslintResults } from "@/formatter/config";
 import { useDetail } from "./detailContext";
 
 const ITEMS_PER_PAGE = 10;
 const PAGINATION_MARGIN = 3;
 
 const Details = () => {
+  const EslintResults = window.EslintResults;
+  const EslintRulesMeta = window.EslintRulesMeta;
+
   const [openFiles, setOpenFiles] = useState<string[]>([]);
 
   const { searchTerm, changeSearchTerm, tab, changeTab } = useDetail();
@@ -39,7 +37,7 @@ const Details = () => {
     if (tab === "warnings") return WarningEslintResults;
     if (tab === "errors") return ErrorEslintResults;
     return EslintResults;
-  }, [tab]);
+  }, [EslintResults, tab]);
 
   const termsFilteredDetails = useMemo(() => {
     return tabFilteredDetails.filter((result) => {

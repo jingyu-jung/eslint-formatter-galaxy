@@ -12,7 +12,9 @@ import { useMemo } from "react";
 const MAX_COUNT = 10;
 
 const TopErrorAndWarnings = () => {
-  const { sortedErrorCounts, sortedWarningCounts, rulesMeta } = useMemo(
+  const EslintRulesMeta = window.EslintRulesMeta;
+
+  const { sortedErrorCounts, sortedWarningCounts } = useMemo(
     () => getEslintTopErrorsAndWarnings(MAX_COUNT),
     []
   );
@@ -46,9 +48,12 @@ const TopErrorAndWarnings = () => {
                     className="border-b border-[var(--color-border-default)]"
                   >
                     <TableCell className="text-[var(--color-fg-default)]">
-                      {rulesMeta?.[ruleName]?.url ? (
+                      {EslintRulesMeta?.rulesMeta?.[ruleName]?.docs?.url ? (
                         <a
-                          href={rulesMeta?.[ruleName]?.url ?? ""}
+                          href={
+                            EslintRulesMeta?.rulesMeta?.[ruleName]?.docs?.url ??
+                            ""
+                          }
                           target="_blank"
                           rel="noreferrer noopener"
                           className="text-[var(--color-accent-fg)] hover:underline"
@@ -97,9 +102,12 @@ const TopErrorAndWarnings = () => {
                     className="border-b border-[var(--color-border-default)]"
                   >
                     <TableCell className="text-[var(--color-fg-default)]">
-                      {rulesMeta?.[ruleName]?.url ? (
+                      {EslintRulesMeta?.rulesMeta?.[ruleName]?.docs?.url ? (
                         <a
-                          href={rulesMeta?.[ruleName]?.url ?? ""}
+                          href={
+                            EslintRulesMeta?.rulesMeta?.[ruleName]?.docs?.url ??
+                            ""
+                          }
                           target="_blank"
                           rel="noreferrer noopener"
                           className="text-[var(--color-accent-fg)] hover:underline"

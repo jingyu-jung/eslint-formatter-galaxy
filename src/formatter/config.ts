@@ -25,12 +25,12 @@ window.EslintRulesMeta = inflateData(
 
 const {
   EslintResults,
-  EslintRulesMeta,
+  // EslintRulesMeta,
   EslintCwd = window.name,
   EslintCreateTime = Date.now(),
 } = window;
 
-export { EslintResults, EslintRulesMeta, EslintCreateTime, EslintCwd };
+export { EslintCreateTime, EslintCwd };
 
 // export const FatalErrorEslintResults = EslintResults.filter(
 //   (result) => result.fatalErrorCount > 0
@@ -94,7 +94,6 @@ export const getEslintAnalysis = () => {
 export const getEslintTopErrorsAndWarnings = (maxCount: number = 10) => {
   const errorCounts: Record<string, number> = {};
   const warningCounts: Record<string, number> = {};
-  const rulesMeta: Record<string, { url: string | null }> = {};
 
   ProblematicEslintResults.forEach((result) => {
     result.messages.forEach((message) => {
@@ -107,18 +106,12 @@ export const getEslintTopErrorsAndWarnings = (maxCount: number = 10) => {
           errorCounts[message.ruleId]++;
         } else {
           errorCounts[message.ruleId] = 1;
-          rulesMeta[message.ruleId] = {
-            url: EslintRulesMeta.rulesMeta?.[message.ruleId]?.docs?.url || null,
-          };
         }
       } else if (message.severity === 1) {
         if (warningCounts[message.ruleId]) {
           warningCounts[message.ruleId]++;
         } else {
           warningCounts[message.ruleId] = 1;
-          rulesMeta[message.ruleId] = {
-            url: EslintRulesMeta.rulesMeta?.[message.ruleId]?.docs?.url || null,
-          };
         }
       }
     });
@@ -132,7 +125,7 @@ export const getEslintTopErrorsAndWarnings = (maxCount: number = 10) => {
     .sort((a, b) => b[1] - a[1])
     .slice(0, maxCount);
 
-  return { sortedErrorCounts, sortedWarningCounts, rulesMeta };
+  return { sortedErrorCounts, sortedWarningCounts };
 };
 
 export const getSortedFilesByErrorAndWarningCount = () => {
