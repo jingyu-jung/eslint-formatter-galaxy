@@ -17,7 +17,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "prepublishOnly": "rm -rf ./dist && pnpm run build && node prepare-publish.cjs",
-    "publish": "pnpm publish ./dist --access public"
+    "publish": "pnpm run prepublishOnly && pnpm publish ./dist --access public"
   },
   "dependencies": {
     "pako": "^2.1.0",
