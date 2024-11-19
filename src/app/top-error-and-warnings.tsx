@@ -7,7 +7,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { getEslintTopErrorsAndWarnings } from "@/formatter/config";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 const MAX_COUNT = 10;
 
@@ -18,6 +18,13 @@ const TopErrorAndWarnings = () => {
     () => getEslintTopErrorsAndWarnings(MAX_COUNT),
     []
   );
+
+  const [counter, setCounter] = useState(0);
+  useEffect(() => {
+    setTimeout(() => {
+      setCounter(counter + 1);
+    }, 1000);
+  }, []);
 
   return (
     <>
@@ -48,12 +55,9 @@ const TopErrorAndWarnings = () => {
                     className="border-b border-[var(--color-border-default)]"
                   >
                     <TableCell className="text-[var(--color-fg-default)]">
-                      {EslintRulesMeta?.rulesMeta?.[ruleName]?.docs?.url ? (
+                      {EslintRulesMeta?.[ruleName]?.docs?.url ? (
                         <a
-                          href={
-                            EslintRulesMeta?.rulesMeta?.[ruleName]?.docs?.url ??
-                            ""
-                          }
+                          href={EslintRulesMeta?.[ruleName]?.docs?.url ?? ""}
                           target="_blank"
                           rel="noreferrer noopener"
                           className="text-[var(--color-accent-fg)] hover:underline"
@@ -102,12 +106,9 @@ const TopErrorAndWarnings = () => {
                     className="border-b border-[var(--color-border-default)]"
                   >
                     <TableCell className="text-[var(--color-fg-default)]">
-                      {EslintRulesMeta?.rulesMeta?.[ruleName]?.docs?.url ? (
+                      {EslintRulesMeta?.[ruleName]?.docs?.url ? (
                         <a
-                          href={
-                            EslintRulesMeta?.rulesMeta?.[ruleName]?.docs?.url ??
-                            ""
-                          }
+                          href={EslintRulesMeta?.[ruleName]?.docs?.url ?? ""}
                           target="_blank"
                           rel="noreferrer noopener"
                           className="text-[var(--color-accent-fg)] hover:underline"

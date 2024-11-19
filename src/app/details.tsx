@@ -23,8 +23,8 @@ const ITEMS_PER_PAGE = 10;
 const PAGINATION_MARGIN = 3;
 
 const Details = () => {
-  const EslintResults = window.EslintResults;
   const EslintRulesMeta = window.EslintRulesMeta;
+  const EslintResults = window.EslintResults;
 
   const [openFiles, setOpenFiles] = useState<string[]>([]);
 
@@ -275,12 +275,11 @@ const Details = () => {
                                           </span>
                                         </div>
                                         {messageInfo.ruleId &&
-                                        EslintRulesMeta.rulesMeta?.[
-                                          messageInfo.ruleId
-                                        ]?.docs?.url ? (
+                                        EslintRulesMeta?.[messageInfo.ruleId]
+                                          ?.docs?.url ? (
                                           <a
                                             href={
-                                              EslintRulesMeta.rulesMeta?.[
+                                              EslintRulesMeta?.[
                                                 messageInfo.ruleId
                                               ]?.docs?.url
                                             }
