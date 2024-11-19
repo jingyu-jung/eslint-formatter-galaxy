@@ -16,7 +16,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "prepublishOnly": "rm -rf dist && pnpm run build && node prepare-publish.cjs",
+    "prepublishOnly": "rm -rf ./dist && pnpm run build && node prepare-publish.cjs",
     "publish": "pnpm publish ./dist --access public"
   },
   "dependencies": {
