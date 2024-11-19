@@ -20,7 +20,10 @@ const formatEslintData = (results, context) => {
       const { ruleId, message } = messageInfo;
       if (ruleId && !(ruleId in EslintRulesMeta)) {
         EslintRulesMeta[ruleId] = rulesMeta[ruleId];
-        delete EslintRulesMeta[ruleId].schema;
+
+        if (EslintRulesMeta?.[ruleId]?.schema) {
+          delete EslintRulesMeta[ruleId].schema;
+        }
       }
       return {
         ...messageInfo,
