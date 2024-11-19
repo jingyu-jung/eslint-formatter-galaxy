@@ -14,40 +14,25 @@ const formatEslintData = (results, context) => {
    */
   const EslintRulesMeta = {};
 
-  const filteredResults = results
-    // .filter((result) => {
-    //   if (
-    //     result.errorCount === 0 &&
-    //     result.fatalErrorCount === 0 &&
-    //     result.fixableErrorCount === 0 &&
-    //     result.fixableWarningCount === 0 &&
-    //     result.warningCount === 0
-    //   ) {
-    //     return false;
-    //   }
-
-    //   return true;
-    // })
-    .forEach((result) => {
-      const { filePath } = result;
-      result.filePath = path.relative(cwd, filePath);
-      result.messages = result.messages.map((messageInfo) => {
-        const { ruleId, message } = messageInfo;
-        if (ruleId && !(ruleId in EslintRulesMeta)) {
-          EslintRulesMeta[ruleId] = rulesMeta[ruleId];
-          delete EslintRulesMeta[ruleId].schema;
-        }
-        return {
-          ...messageInfo,
-          message: stripAnsi(message),
-        };
-      });
-
-      delete result.source;
-      delete result.output;
-      delete result.usedDeprecatedRules;
-      delete result.suppressedMessages;
+  const filteredResults = results.forEach((result) => {
+    const { filePath } = result;
+    result.filePath = path.relative(cwd, filePath);
+    result.messages = result.messages.map((messageInfo) => {
+      const { ruleId, message } = messageInfo;
+      if (ruleId && !(ruleId in EslintRulesMeta)) {
+        EslintRulesMeta[ruleId] = rulesMeta[ruleId];
+        delete EslintRulesMeta[ruleId].schema;
+      }
+      return {
+        ...messageInfo,
+        message: stripAnsi(message),
+      };
     });
+
+    delete result.output;
+    delete result.usedDeprecatedRules;
+    delete result.suppressedMessages;
+  });
 
   return { EslintResults: filteredResults, EslintRulesMeta };
 };
@@ -68,11 +53,6 @@ const deflateData = (data) => {
  * @param {import('eslint').ESLint.LintResultData} context
  */
 module.exports = (results, context) => {
-  try {
-    const tableFormatter = require("eslint-formatter-table");
-    console.log(tableFormatter(results, context));
-  } catch (e) {}
-
   const { cwd: EslintCwd } = context;
   const EslintCreateTime = Date.now();
   const { EslintResults, EslintRulesMeta } = formatEslintData(results, context);
