@@ -25,12 +25,12 @@ window.EslintRulesMeta = inflateData(
 
 const {
   EslintResults,
-  // EslintRulesMeta,
+  EslintRulesMeta,
   EslintCwd = window.name,
   EslintCreateTime = Date.now(),
 } = window;
 
-export { EslintCreateTime, EslintCwd };
+export { EslintCreateTime, EslintCwd, EslintResults, EslintRulesMeta };
 
 // export const FatalErrorEslintResults = EslintResults.filter(
 //   (result) => result.fatalErrorCount > 0

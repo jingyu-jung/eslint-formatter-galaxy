@@ -6,14 +6,15 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { getEslintTopErrorsAndWarnings } from "@/formatter/config";
+import {
+  EslintRulesMeta,
+  getEslintTopErrorsAndWarnings,
+} from "@/formatter/config";
 import { useEffect, useMemo, useState } from "react";
 
 const MAX_COUNT = 10;
 
 const TopErrorAndWarnings = () => {
-  const EslintRulesMeta = window.EslintRulesMeta;
-
   const { sortedErrorCounts, sortedWarningCounts } = useMemo(
     () => getEslintTopErrorsAndWarnings(MAX_COUNT),
     []
