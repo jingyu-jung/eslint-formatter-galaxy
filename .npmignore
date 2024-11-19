@@ -1,7 +1,10 @@
 # 모든 파일 제외
 *
 
-# 포함할 파일
+# dist 디렉토리 포함
+!dist/
+
+# dist 디렉토리 내의 파일 포함
 !dist/index.html
-!package.json
-!index.js
+!dist/package.json
+!dist/index.js

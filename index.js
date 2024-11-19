@@ -66,7 +66,7 @@ module.exports = (results, context) => {
         </script>
     `;
 
-  const template = getFileContent("./dist/index.html");
+  const template = getFileContent("./index.html");
   return template.replace(
     '<script src="./EslintResults.js"></script>',
     scriptContent
