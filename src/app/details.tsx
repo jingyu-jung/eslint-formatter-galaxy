@@ -277,12 +277,12 @@ const Details = () => {
                                           </span>
                                         </div>
                                         {messageInfo.ruleId &&
-                                        EslintRulesMeta.rulesMeta[
+                                        EslintRulesMeta.rulesMeta?.[
                                           messageInfo.ruleId
                                         ]?.docs?.url ? (
                                           <a
                                             href={
-                                              EslintRulesMeta.rulesMeta[
+                                              EslintRulesMeta.rulesMeta?.[
                                                 messageInfo.ruleId
                                               ]?.docs?.url
                                             }

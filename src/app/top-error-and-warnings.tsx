@@ -46,9 +46,9 @@ const TopErrorAndWarnings = () => {
                     className="border-b border-[var(--color-border-default)]"
                   >
                     <TableCell className="text-[var(--color-fg-default)]">
-                      {rulesMeta[ruleName]?.url ? (
+                      {rulesMeta?.[ruleName]?.url ? (
                         <a
-                          href={rulesMeta[ruleName]?.url ?? ""}
+                          href={rulesMeta?.[ruleName]?.url ?? ""}
                           target="_blank"
                           rel="noreferrer noopener"
                           className="text-[var(--color-accent-fg)] hover:underline"
@@ -97,9 +97,9 @@ const TopErrorAndWarnings = () => {
                     className="border-b border-[var(--color-border-default)]"
                   >
                     <TableCell className="text-[var(--color-fg-default)]">
-                      {rulesMeta[ruleName]?.url ? (
+                      {rulesMeta?.[ruleName]?.url ? (
                         <a
-                          href={rulesMeta[ruleName]?.url ?? ""}
+                          href={rulesMeta?.[ruleName]?.url ?? ""}
                           target="_blank"
                           rel="noreferrer noopener"
                           className="text-[var(--color-accent-fg)] hover:underline"

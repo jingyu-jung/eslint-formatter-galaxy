@@ -1,6 +1,6 @@
 {
   "name": "eslint-formatter-galaxy",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A ESLint formatter with a space theme",
   "main": "index.js",
   "keywords": [
@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "pako": "^2.1.0",
-    "strip-ansi": "^7.1.0"
+    "strip-ansi": "6.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
@@ -62,5 +62,8 @@
   "engines": {
     "node": ">=20.10.0",
     "pnpm": ">=9.0.0"
+  },
+  "resolutions": {
+    "strip-ansi": "6.0.1"
   }
 }

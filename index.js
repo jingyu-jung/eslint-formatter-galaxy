@@ -13,8 +13,7 @@ const formatEslintData = (results, context) => {
    * @type {Record<string, import('eslint').Rule.RuleMetaData>}
    */
   const EslintRulesMeta = {};
-
-  const filteredResults = results.forEach((result) => {
+  results.forEach((result) => {
     const { filePath } = result;
     result.filePath = path.relative(cwd, filePath);
     result.messages = result.messages.map((messageInfo) => {
@@ -34,7 +33,7 @@ const formatEslintData = (results, context) => {
     delete result.suppressedMessages;
   });
 
-  return { EslintResults: filteredResults, EslintRulesMeta };
+  return { EslintResults: results, EslintRulesMeta };
 };
 
 /**
@@ -66,7 +65,7 @@ module.exports = (results, context) => {
         </script>
     `;
 
-  const template = getFileContent("./index.html");
+  const template = getFileContent("./dist/index.html");
   return template.replace(
     '<script src="./EslintResults.js"></script>',
     scriptContent
