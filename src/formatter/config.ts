@@ -1,14 +1,5 @@
-import {
-  // flat,
-  sum,
-} from "remeda";
+import { sum } from "remeda";
 import { inflateRaw } from "pako";
-
-// For Debug :/
-// import { deflateRaw } from "pako";
-// import { result, context } from "./mock";
-// console.log("result", `${deflateRaw(JSON.stringify(result).toString())}`);
-// console.log("rulesMeta", `${deflateRaw(JSON.stringify(context).toString())}`);
 
 const inflateData = (str: string) => {
   return JSON.parse(
@@ -32,10 +23,6 @@ const {
 
 export { EslintCreateTime, EslintCwd, EslintResults, EslintRulesMeta };
 
-// export const FatalErrorEslintResults = EslintResults.filter(
-//   (result) => result.fatalErrorCount > 0
-// );
-
 export const ProblematicEslintResults = EslintResults.filter((result) => {
   return result.errorCount > 0 || result.warningCount > 0;
 });
@@ -51,12 +38,6 @@ export const WarningEslintResults = EslintResults.filter(
 export const NoProblematicEslintResults = EslintResults.filter(
   (result) => result.errorCount === 0 && result.warningCount === 0
 );
-
-// const RankMessages = flat(ProblematicEslintResults.map((v) => v.messages));
-
-// export const hasNoError =
-//   !RankMessages.some((v) => v.severity === 2) &&
-//   FatalErrorEslintResults.length === 0;
 
 export const getEslintAnalysis = () => {
   const errorCount = sum(

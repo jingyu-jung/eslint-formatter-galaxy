@@ -2,11 +2,11 @@
 const fs = require("fs-extra");
 const path = require("path");
 
-const sourceDir = __dirname; // 현재 디렉토리
+const sourceDir = process.cwd(); // 현재 디렉토리
 const distDir = path.join(sourceDir, "dist"); // dist 디렉토리 경로
 
 // 복사할 파일 목록
-const filesToCopy = ["index.js", "package.json"];
+const filesToCopy = ["index.js", "package.json", "README.md"];
 
 // dist 디렉토리 생성
 fs.ensureDirSync(distDir);

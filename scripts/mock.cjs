@@ -1,4 +1,4 @@
-export const result = [
+const result = [
   {
     filePath:
       "/Users/jeongjingyu/Desktop/workspaces/web-3/packages/tving-utils/coverage/lcov-report/block-navigation.js",
@@ -55101,7 +55101,7 @@ export const result = [
   },
 ];
 
-export const context = {
+const rulesMeta = {
   "accessor-pairs": {
     type: "suggestion",
     docs: {
@@ -55211,8 +55211,7 @@ export const context = {
       },
     ],
     messages: {
-      unexpectedSpaceAfter:
-        "There should be no space after '{{tokenValue}}'.",
+      unexpectedSpaceAfter: "There should be no space after '{{tokenValue}}'.",
       unexpectedSpaceBefore:
         "There should be no space before '{{tokenValue}}'.",
       missingSpaceAfter: "A space is required after '{{tokenValue}}'.",
@@ -55222,8 +55221,7 @@ export const context = {
   "array-callback-return": {
     type: "problem",
     docs: {
-      description:
-        "Enforce `return` statements in callbacks of array methods",
+      description: "Enforce `return` statements in callbacks of array methods",
       recommended: false,
       url: "https://eslint.org/docs/latest/rules/array-callback-return",
     },
@@ -55510,8 +55508,7 @@ export const context = {
         "Opening curly brace does not appear on the same line as controlling statement.",
       sameLineOpen:
         "Opening curly brace appears on the same line as controlling statement.",
-      blockSameLine:
-        "Statement inside of curly braces should be on next line.",
+      blockSameLine: "Statement inside of curly braces should be on next line.",
       nextLineClose:
         "Closing curly brace does not appear on the same line as the subsequent block.",
       singleLineClose:
@@ -55885,8 +55882,7 @@ export const context = {
     messages: {
       unexpectedSpaceBefore:
         "There should be no space before '{{tokenValue}}'.",
-      unexpectedSpaceAfter:
-        "There should be no space after '{{tokenValue}}'.",
+      unexpectedSpaceAfter: "There should be no space after '{{tokenValue}}'.",
       missingSpaceBefore: "A space is required before '{{tokenValue}}'.",
       missingSpaceAfter: "A space is required after '{{tokenValue}}'.",
     },
@@ -55958,8 +55954,7 @@ export const context = {
   curly: {
     type: "suggestion",
     docs: {
-      description:
-        "Enforce consistent brace style for all control statements",
+      description: "Enforce consistent brace style for all control statements",
       recommended: false,
       url: "https://eslint.org/docs/latest/rules/curly",
     },
@@ -56062,8 +56057,7 @@ export const context = {
     fixable: "code",
     messages: {
       expectedDotAfterObject: "Expected dot to be on same line as object.",
-      expectedDotBeforeProperty:
-        "Expected dot to be on same line as property.",
+      expectedDotBeforeProperty: "Expected dot to be on same line as property.",
     },
   },
   "dot-notation": {
@@ -56221,8 +56215,7 @@ export const context = {
     messages: {
       unexpectedWhitespace:
         "Unexpected whitespace between function name and paren.",
-      unexpectedNewline:
-        "Unexpected newline between function name and paren.",
+      unexpectedNewline: "Unexpected newline between function name and paren.",
       missing: "Missing space between function name and paren.",
     },
   },
@@ -56374,8 +56367,7 @@ export const context = {
     replacedBy: [],
     type: "layout",
     docs: {
-      description:
-        "Enforce consistent line breaks inside function parentheses",
+      description: "Enforce consistent line breaks inside function parentheses",
       recommended: false,
       url: "https://eslint.org/docs/latest/rules/function-paren-newline",
     },
@@ -56565,8 +56557,7 @@ export const context = {
     messages: {
       notGrouped:
         "Accessor pair {{ formerName }} and {{ latterName }} should be grouped.",
-      invalidOrder:
-        "Expected {{ latterName }} to be before {{ formerName }}.",
+      invalidOrder: "Expected {{ latterName }} to be before {{ formerName }}.",
     },
   },
   "guard-for-in": {
@@ -56679,8 +56670,7 @@ export const context = {
     ],
     messages: {
       tooShort: "Identifier name '{{name}}' is too short (< {{min}}).",
-      tooShortPrivate:
-        "Identifier name '#{{name}}' is too short (< {{min}}).",
+      tooShortPrivate: "Identifier name '#{{name}}' is too short (< {{min}}).",
       tooLong: "Identifier name '{{name}}' is too long (> {{max}}).",
       tooLongPrivate: "Identifier name #'{{name}}' is too long (> {{max}}).",
     },
@@ -57377,8 +57367,7 @@ export const context = {
       extraKey: "Extra space after {{computed}}key '{{key}}'.",
       extraValue: "Extra space before value for {{computed}}key '{{key}}'.",
       missingKey: "Missing space after {{computed}}key '{{key}}'.",
-      missingValue:
-        "Missing space before value for {{computed}}key '{{key}}'.",
+      missingValue: "Missing space before value for {{computed}}key '{{key}}'.",
     },
   },
   "keyword-spacing": {
@@ -58471,8 +58460,7 @@ export const context = {
   "logical-assignment-operators": {
     type: "suggestion",
     docs: {
-      description:
-        "Require or disallow logical assignment operator shorthand",
+      description: "Require or disallow logical assignment operator shorthand",
       recommended: false,
       url: "https://eslint.org/docs/latest/rules/logical-assignment-operators",
     },
@@ -59121,8 +59109,7 @@ export const context = {
     ],
     messages: {
       missing: "Missing '()' invoking a constructor.",
-      unnecessary:
-        "Unnecessary '()' invoking a constructor with no arguments.",
+      unnecessary: "Unnecessary '()' invoking a constructor with no arguments.",
     },
   },
   "newline-after-var": {
@@ -60432,8 +60419,7 @@ export const context = {
     },
     schema: [],
     messages: {
-      noLossOfPrecision:
-        "This number literal will lose precision at runtime.",
+      noLossOfPrecision: "This number literal will lose precision at runtime.",
     },
   },
   "no-magic-numbers": {
@@ -61022,8 +61008,7 @@ export const context = {
       },
     ],
     messages: {
-      assignmentToFunctionParam:
-        "Assignment to function parameter '{{name}}'.",
+      assignmentToFunctionParam: "Assignment to function parameter '{{name}}'.",
       assignmentToFunctionParamProp:
         "Assignment to property of function parameter '{{name}}'.",
     },
@@ -61098,8 +61083,7 @@ export const context = {
   "no-promise-executor-return": {
     type: "problem",
     docs: {
-      description:
-        "Disallow returning values from Promise executor functions",
+      description: "Disallow returning values from Promise executor functions",
       recommended: false,
       url: "https://eslint.org/docs/latest/rules/no-promise-executor-return",
     },
@@ -61685,8 +61669,7 @@ export const context = {
   "no-self-assign": {
     type: "problem",
     docs: {
-      description:
-        "Disallow assignments where both sides are exactly the same",
+      description: "Disallow assignments where both sides are exactly the same",
       recommended: true,
       url: "https://eslint.org/docs/latest/rules/no-self-assign",
     },
@@ -61709,8 +61692,7 @@ export const context = {
   "no-self-compare": {
     type: "problem",
     docs: {
-      description:
-        "Disallow comparisons where both sides are exactly the same",
+      description: "Disallow comparisons where both sides are exactly the same",
       recommended: false,
       url: "https://eslint.org/docs/latest/rules/no-self-compare",
     },
@@ -62102,8 +62084,7 @@ export const context = {
   "no-unneeded-ternary": {
     type: "suggestion",
     docs: {
-      description:
-        "Disallow ternary operators when simpler alternatives exist",
+      description: "Disallow ternary operators when simpler alternatives exist",
       recommended: false,
       url: "https://eslint.org/docs/latest/rules/no-unneeded-ternary",
     },
@@ -62143,8 +62124,7 @@ export const context = {
   "no-unreachable-loop": {
     type: "problem",
     docs: {
-      description:
-        "Disallow loops with a body that allows only one iteration",
+      description: "Disallow loops with a body that allows only one iteration",
       recommended: false,
       url: "https://eslint.org/docs/latest/rules/no-unreachable-loop",
     },
@@ -62188,8 +62168,7 @@ export const context = {
   "no-unsafe-negation": {
     type: "problem",
     docs: {
-      description:
-        "Disallow negating the left operand of relational operators",
+      description: "Disallow negating the left operand of relational operators",
       recommended: true,
       url: "https://eslint.org/docs/latest/rules/no-unsafe-negation",
     },
@@ -62626,8 +62605,7 @@ export const context = {
       },
     ],
     messages: {
-      unexpectedComment:
-        "Unexpected '{{matchedTerm}}' comment: '{{comment}}'.",
+      unexpectedComment: "Unexpected '{{matchedTerm}}' comment: '{{comment}}'.",
     },
   },
   "no-whitespace-before-property": {
@@ -63081,8 +63059,7 @@ export const context = {
     replacedBy: [],
     type: "suggestion",
     docs: {
-      description:
-        "Require or disallow newlines around variable declarations",
+      description: "Require or disallow newlines around variable declarations",
       recommended: false,
       url: "https://eslint.org/docs/latest/rules/one-var-declaration-per-line",
     },
@@ -63093,8 +63070,7 @@ export const context = {
     ],
     fixable: "whitespace",
     messages: {
-      expectVarOnNewline:
-        "Expected variable declaration to be on a new line.",
+      expectVarOnNewline: "Expected variable declaration to be on a new line.",
     },
   },
   "operator-assignment": {
@@ -63147,8 +63123,7 @@ export const context = {
     messages: {
       operatorAtBeginning:
         "'{{operator}}' should be placed at the beginning of the line.",
-      operatorAtEnd:
-        "'{{operator}}' should be placed at the end of the line.",
+      operatorAtEnd: "'{{operator}}' should be placed at the end of the line.",
       badLinebreak: "Bad line breaking before and after '{{operator}}'.",
       noLinebreak:
         "There should be no line break before or after '{{operator}}'.",
@@ -63664,8 +63639,7 @@ export const context = {
   "prefer-template": {
     type: "suggestion",
     docs: {
-      description:
-        "Require template literals instead of string concatenation",
+      description: "Require template literals instead of string concatenation",
       recommended: false,
       url: "https://eslint.org/docs/latest/rules/prefer-template",
     },
@@ -63844,8 +63818,7 @@ export const context = {
   "require-await": {
     type: "suggestion",
     docs: {
-      description:
-        "Disallow async functions which have no `await` expression",
+      description: "Disallow async functions which have no `await` expression",
       recommended: false,
       url: "https://eslint.org/docs/latest/rules/require-await",
     },
@@ -64321,8 +64294,7 @@ export const context = {
     replacedBy: [],
     type: "layout",
     docs: {
-      description:
-        "Enforce consistent spacing before or after unary operators",
+      description: "Enforce consistent spacing before or after unary operators",
       recommended: false,
       url: "https://eslint.org/docs/latest/rules/space-unary-ops",
     },
@@ -64352,14 +64324,12 @@ export const context = {
     messages: {
       unexpectedBefore:
         "Unexpected space before unary operator '{{operator}}'.",
-      unexpectedAfter:
-        "Unexpected space after unary operator '{{operator}}'.",
+      unexpectedAfter: "Unexpected space after unary operator '{{operator}}'.",
       unexpectedAfterWord:
         "Unexpected space after unary word operator '{{word}}'.",
       wordOperator:
         "Unary word operator '{{word}}' must be followed by whitespace.",
-      operator:
-        "Unary operator '{{operator}}' must be followed by whitespace.",
+      operator: "Unary operator '{{operator}}' must be followed by whitespace.",
       beforeUnaryExpressions:
         "Space is required before unary expressions '{{token}}'.",
     },
@@ -64443,8 +64413,7 @@ export const context = {
         "Unexpected space or tab after marker ({{refChar}}) in comment.",
       expectedExceptionAfter:
         "Expected exception block, space or tab after '{{refChar}}' in comment.",
-      unexpectedSpaceBefore:
-        "Unexpected space or tab before '*/' in comment.",
+      unexpectedSpaceBefore: "Unexpected space or tab before '*/' in comment.",
       unexpectedSpaceAfter:
         "Unexpected space or tab after '{{refChar}}' in comment.",
       expectedSpaceBefore: "Expected space or tab before '*/' in comment.",
@@ -64566,8 +64535,7 @@ export const context = {
       },
     ],
     messages: {
-      unexpected:
-        "Unexpected space between template tag and template literal.",
+      unexpected: "Unexpected space between template tag and template literal.",
       missing: "Missing space between template tag and template literal.",
     },
   },
@@ -64618,8 +64586,7 @@ export const context = {
         "'switch(NaN)' can never match a case clause. Use Number.isNaN instead of the switch.",
       caseNaN:
         "'case NaN' can never match. Use Number.isNaN before the switch.",
-      indexOfNaN:
-        "Array prototype method '{{ methodName }}' cannot find NaN.",
+      indexOfNaN: "Array prototype method '{{ methodName }}' cannot find NaN.",
     },
   },
   "valid-jsdoc": {
@@ -64688,8 +64655,7 @@ export const context = {
       missingReturn: "Missing JSDoc @{{returns}} for function.",
       missingParam: "Missing JSDoc for parameter '{{name}}'.",
       duplicateParam: "Duplicate JSDoc parameter '{{name}}'.",
-      unsatisfiedDesc:
-        "JSDoc description does not satisfy the regex pattern.",
+      unsatisfiedDesc: "JSDoc description does not satisfy the regex pattern.",
     },
     deprecated: true,
     replacedBy: [],
@@ -65330,8 +65296,7 @@ export const context = {
             type: "boolean",
           },
           allowLiteral: {
-            description:
-              "If `false`, will report default export of a literal",
+            description: "If `false`, will report default export of a literal",
             type: "boolean",
           },
           allowObject: {
@@ -65353,8 +65318,7 @@ export const context = {
       {
         properties: {
           src: {
-            description:
-              "files/paths to be analyzed (only for unused exports)",
+            description: "files/paths to be analyzed (only for unused exports)",
             type: "array",
             minItems: 1,
             items: {
@@ -65931,8 +65895,7 @@ export const context = {
       missingType: "Missing an explicit type attribute for button",
       complexType:
         "The button type attribute must be specified by a static string or a trivial ternary expression",
-      invalidValue:
-        '"{{value}}" is an invalid value for button type attribute',
+      invalidValue: '"{{value}}" is an invalid value for button type attribute',
       forbiddenValue:
         '"{{value}}" is an invalid value for button type attribute',
     },
@@ -65997,8 +65960,7 @@ export const context = {
         "Must never use destructuring props assignment in SFC argument",
       noDestructContextInSFCArg:
         "Must never use destructuring context assignment in SFC argument",
-      noDestructAssignment:
-        "Must never use destructuring {{type}} assignment",
+      noDestructAssignment: "Must never use destructuring {{type}} assignment",
       useDestructAssignment: "Must use destructuring {{type}} assignment",
       destructureInSignature:
         "Must destructure props in the function signature.",
@@ -66275,8 +66237,7 @@ export const context = {
     messages: {
       "function-declaration":
         "Function component is not a function declaration",
-      "function-expression":
-        "Function component is not a function expression",
+      "function-expression": "Function component is not a function expression",
       "arrow-function": "Function component is not an arrow function",
     },
     schema: [
@@ -66456,8 +66417,7 @@ export const context = {
     },
     fixable: null,
     messages: {
-      spacingAfterPrev:
-        "Ambiguous spacing after previous element {{element}}",
+      spacingAfterPrev: "Ambiguous spacing after previous element {{element}}",
       spacingBeforeNext: "Ambiguous spacing before next element {{element}}",
     },
     schema: [],
@@ -67608,12 +67568,10 @@ export const context = {
       listCallbacksLast: "Callbacks must be listed after all other props",
       listShorthandFirst:
         "Shorthand props must be listed before all other props",
-      listShorthandLast:
-        "Shorthand props must be listed after all other props",
+      listShorthandLast: "Shorthand props must be listed after all other props",
       listMultilineFirst:
         "Multiline props must be listed before all other props",
-      listMultilineLast:
-        "Multiline props must be listed after all other props",
+      listMultilineLast: "Multiline props must be listed after all other props",
       sortPropsByAlpha: "Props should be sorted alphabetically",
     },
     schema: [
@@ -67815,8 +67773,7 @@ export const context = {
       suggestRemoveEmpty: '"remove empty attribute {{attributeName}}"',
       suggestRemoveInvalid: "“remove invalid attribute {{reportingValue}}”",
       suggestRemoveWhitespaces: "remove whitespaces in “{{reportingValue}}”",
-      suggestRemoveNonString:
-        "remove non-string value in “{{reportingValue}}”",
+      suggestRemoveNonString: "remove non-string value in “{{reportingValue}}”",
     },
     schema: [
       {
@@ -68154,8 +68111,7 @@ export const context = {
   },
   "react/no-unescaped-entities": {
     docs: {
-      description:
-        "Disallow unescaped HTML entities from appearing in markup",
+      description: "Disallow unescaped HTML entities from appearing in markup",
       category: "Possible Errors",
       recommended: true,
       url: "https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/no-unescaped-entities.md",
@@ -68665,8 +68621,7 @@ export const context = {
         "Required prop types must be listed before all other prop types",
       callbackPropsLast:
         "Callback prop types must be listed after all other prop types",
-      propsNotSorted:
-        "Prop types declarations should be sorted alphabetically",
+      propsNotSorted: "Prop types declarations should be sorted alphabetically",
     },
     schema: [
       {
@@ -68701,8 +68656,7 @@ export const context = {
     },
     messages: {
       stateInitConstructor: "State initialization should be in a constructor",
-      stateInitClassProp:
-        "State initialization should be in a class property",
+      stateInitClassProp: "State initialization should be in a class property",
     },
     schema: [
       {
@@ -69997,8 +69951,7 @@ export const context = {
     schema: [],
     type: "suggestion",
     docs: {
-      description:
-        '"if ... else if" constructs should end with "else" clauses',
+      description: '"if ... else if" constructs should end with "else" clauses',
       recommended: false,
       url: "https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/elseif-without-else.md",
     },
@@ -70129,8 +70082,7 @@ export const context = {
     },
     type: "problem",
     docs: {
-      description:
-        "Collection elements should not be replaced unconditionally",
+      description: "Collection elements should not be replaced unconditionally",
       recommended: "error",
       url: "https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-element-overwrite.md",
     },
@@ -70371,14 +70323,12 @@ export const context = {
   },
   "sonarjs/no-small-switch": {
     messages: {
-      smallSwitch:
-        '"switch" statements should have at least 3 "case" clauses',
+      smallSwitch: '"switch" statements should have at least 3 "case" clauses',
     },
     schema: [],
     type: "suggestion",
     docs: {
-      description:
-        '"switch" statements should have at least 3 "case" clauses',
+      description: '"switch" statements should have at least 3 "case" clauses',
       recommended: "error",
       url: "https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/no-small-switch.md",
     },
@@ -70762,8 +70712,7 @@ export const context = {
         "Opening curly brace does not appear on the same line as controlling statement.",
       sameLineOpen:
         "Opening curly brace appears on the same line as controlling statement.",
-      blockSameLine:
-        "Statement inside of curly braces should be on next line.",
+      blockSameLine: "Statement inside of curly braces should be on next line.",
       nextLineClose:
         "Closing curly brace does not appear on the same line as the subsequent block.",
       singleLineClose:
@@ -70800,8 +70749,7 @@ export const context = {
     hasSuggestions: true,
     messages: {
       preferFieldStyle: "Literals should be exposed using readonly fields.",
-      preferFieldStyleSuggestion:
-        "Replace the literals with readonly fields.",
+      preferFieldStyleSuggestion: "Replace the literals with readonly fields.",
       preferGetterStyle: "Literals should be exposed using getters.",
       preferGetterStyleSuggestion: "Replace the literals with getters.",
     },
@@ -71433,8 +71381,7 @@ export const context = {
     messages: {
       unexpectedWhitespace:
         "Unexpected whitespace between function name and paren.",
-      unexpectedNewline:
-        "Unexpected newline between function name and paren.",
+      unexpectedNewline: "Unexpected newline between function name and paren.",
       missing: "Missing space between function name and paren.",
     },
   },
@@ -71899,8 +71846,7 @@ export const context = {
       extraKey: "Extra space after {{computed}}key '{{key}}'.",
       extraValue: "Extra space before value for {{computed}}key '{{key}}'.",
       missingKey: "Missing space after {{computed}}key '{{key}}'.",
-      missingValue:
-        "Missing space before value for {{computed}}key '{{key}}'.",
+      missingValue: "Missing space before value for {{computed}}key '{{key}}'.",
     },
   },
   "@typescript-eslint/keyword-spacing": {
@@ -75622,8 +75568,7 @@ export const context = {
     hasSuggestions: undefined,
     schema: [],
     messages: {
-      noLossOfPrecision:
-        "This number literal will lose precision at runtime.",
+      noLossOfPrecision: "This number literal will lose precision at runtime.",
     },
   },
   "@typescript-eslint/no-magic-numbers": {
@@ -75731,8 +75676,7 @@ export const context = {
     },
     schema: [],
     messages: {
-      errorMessageInterface:
-        "Interfaces cannot be constructed, only classes.",
+      errorMessageInterface: "Interfaces cannot be constructed, only classes.",
       errorMessageClass: "Class cannot have method named `new`.",
     },
   },
@@ -75803,8 +75747,7 @@ export const context = {
   },
   "@typescript-eslint/no-mixed-enums": {
     docs: {
-      description:
-        "Disallow enums from having both number and string members",
+      description: "Disallow enums from having both number and string members",
       recommended: "strict",
       requiresTypeChecking: true,
       url: "https://typescript-eslint.io/rules/no-mixed-enums",
@@ -76280,8 +76223,7 @@ export const context = {
             $ref: "#/items/0/$defs/simpleOptions",
           },
           allowConditionalTypes: {
-            description:
-              "Whether to allow type aliases for conditional types.",
+            description: "Whether to allow type aliases for conditional types.",
             $ref: "#/items/0/$defs/simpleOptions",
           },
           allowConstructors: {
@@ -76395,8 +76337,7 @@ export const context = {
       noOverlapBooleanExpression:
         "Unnecessary conditional, the types have no overlap.",
       never: "Unnecessary conditional, value is `never`.",
-      neverOptionalChain:
-        "Unnecessary optional chain on a non-nullish value.",
+      neverOptionalChain: "Unnecessary optional chain on a non-nullish value.",
       noStrictNullCheck:
         "This rule requires the `strictNullChecks` compiler option to be turned on to function correctly.",
     },
@@ -76509,8 +76450,7 @@ export const context = {
       anyAssignment: "Unsafe assignment of an `any` value.",
       anyAssignmentThis:
         "Unsafe assignment of an `any` value. `this` is typed as `any`.\nYou can try to fix this by turning on the `noImplicitThis` compiler option, or adding a `this` parameter to the function.",
-      unsafeArrayPattern:
-        "Unsafe array destructuring of an `any` array value.",
+      unsafeArrayPattern: "Unsafe array destructuring of an `any` array value.",
       unsafeArrayPatternFromTuple:
         "Unsafe array destructuring of a tuple element with an `any` value.",
       unsafeAssignment:
@@ -76589,8 +76529,7 @@ export const context = {
   "@typescript-eslint/no-unsafe-return": {
     type: "problem",
     docs: {
-      description:
-        "Disallow returning a value with type `any` from a function",
+      description: "Disallow returning a value with type `any` from a function",
       recommended: "recommended",
       requiresTypeChecking: true,
       url: "https://typescript-eslint.io/rules/no-unsafe-return",
@@ -76787,8 +76726,7 @@ export const context = {
   "@typescript-eslint/no-var-requires": {
     type: "problem",
     docs: {
-      description:
-        "Disallow `require` statements except in import statements",
+      description: "Disallow `require` statements except in import statements",
       recommended: "recommended",
       url: "https://typescript-eslint.io/rules/no-var-requires",
     },
@@ -77046,8 +76984,7 @@ export const context = {
         "Expected a `const` instead of a literal type assertion.",
       variableConstAssertion:
         "Expected a `const` assertion instead of a literal type annotation.",
-      variableSuggest:
-        "You should use `as const` instead of type annotation.",
+      variableSuggest: "You should use `as const` instead of type annotation.",
     },
     schema: [],
   },
@@ -77347,12 +77284,11 @@ export const context = {
             description:
               'Skip operands that are not typed with `null` and/or `undefined` when inspecting "loose boolean" operands.',
           },
-          allowPotentiallyUnsafeFixesThatModifyTheReturnTypeIKnowWhatImDoing:
-            {
-              type: "boolean",
-              description:
-                "Allow autofixers that will change the return type of the expression. This option is considered unsafe as it may break the build.",
-            },
+          allowPotentiallyUnsafeFixesThatModifyTheReturnTypeIKnowWhatImDoing: {
+            type: "boolean",
+            description:
+              "Allow autofixers that will change the return type of the expression. This option is considered unsafe as it may break the build.",
+          },
         },
       },
     ],
@@ -77692,8 +77628,7 @@ export const context = {
   "@typescript-eslint/require-await": {
     type: "suggestion",
     docs: {
-      description:
-        "Disallow async functions which have no `await` expression",
+      description: "Disallow async functions which have no `await` expression",
       recommended: "recommended",
       requiresTypeChecking: true,
       extendsBaseRule: true,
@@ -78358,4 +78293,9 @@ export const context = {
       },
     ],
   },
-}
+};
+
+module.exports = {
+  result,
+  rulesMeta,
+};
