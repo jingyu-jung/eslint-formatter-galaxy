@@ -1,6 +1,6 @@
 {
   "name": "eslint-formatter-galaxy",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "description": "A ESLint formatter with a space theme",
   "main": "index.js",
   "keywords": [
@@ -19,7 +19,7 @@
     "preview": "vite preview",
     "prepublishOnly": "rm -rf ./dist && pnpm run build && node ./scripts/prepare-publish.cjs",
     "publish": "pnpm run prepublishOnly && pnpm publish ./dist --access public",
-    "package-test": "pnpm run prepublishOnly && pnpm pack"
+    "package-test": "pnpm run prepublishOnly && cd dist && pnpm pack"
   },
   "dependencies": {
     "pako": "^2.1.0",
