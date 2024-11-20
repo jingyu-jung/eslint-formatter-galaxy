@@ -1,4 +1,4 @@
-// prepare-publish.js
+// prepare-publish.cjs
 const fs = require("fs-extra");
 const path = require("path");
 
@@ -28,4 +28,11 @@ filesToCopy.forEach((file) => {
   }
 });
 
-console.log("Files copied to dist directory and package.json modified.");
+// docs 폴더 복사
+const docsSourceDir = path.join(sourceDir, "docs");
+const docsTargetDir = path.join(distDir, "docs");
+fs.copySync(docsSourceDir, docsTargetDir);
+
+console.log(
+  "Files copied to dist directory, package.json modified, and docs folder copied."
+);

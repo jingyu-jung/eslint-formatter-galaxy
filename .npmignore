@@ -8,3 +8,5 @@
 !dist/index.html
 !dist/package.json
 !dist/index.js
+!dist/docs/
+!dist/docs/**

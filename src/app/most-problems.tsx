@@ -20,7 +20,7 @@ import { getSortedFilesByErrorAndWarningCount } from "@/formatter/config";
 import { useDetail } from "./detailContext";
 
 const ITEMS_PER_PAGE = 10;
-const PAGINATION_MARGIN = 3;
+const PAGINATION_MARGIN = window.innerWidth < 640 ? 2 : 3;
 
 const MostProblems = () => {
   const sortedFilesByErrorAndWarningCount = useMemo(
@@ -106,7 +106,7 @@ const MostProblemsTable = ({ data }: MostProblemsTableProps) => {
               key={fileName}
               className="border-b border-[var(--color-border-default)]"
             >
-              <TableCell className="text-[var(--color-fg-default)]">
+              <TableCell className="text-[var(--color-fg-default)] break-all">
                 <a
                   href="#details"
                   className="text-[var(--color-accent-fg)] hover:underline"
@@ -129,7 +129,7 @@ const MostProblemsTable = ({ data }: MostProblemsTableProps) => {
         </TableBody>
       </Table>
       <div className="mt-4">
-        <Pagination>
+        <Pagination className="transform origin-center scale-[0.8] sm:scale-100">
           <PaginationContent>
             {mostProblemsPage > viewingMinPage && (
               <PaginationItem>

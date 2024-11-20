@@ -10,7 +10,7 @@ import {
   EslintRulesMeta,
   getEslintTopErrorsAndWarnings,
 } from "@/formatter/config";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
 
 const MAX_COUNT = 10;
 
@@ -19,13 +19,6 @@ const TopErrorAndWarnings = () => {
     () => getEslintTopErrorsAndWarnings(MAX_COUNT),
     []
   );
-
-  const [counter, setCounter] = useState(0);
-  useEffect(() => {
-    setTimeout(() => {
-      setCounter(counter + 1);
-    }, 1000);
-  }, []);
 
   return (
     <>
@@ -55,7 +48,7 @@ const TopErrorAndWarnings = () => {
                     key={ruleName}
                     className="border-b border-[var(--color-border-default)]"
                   >
-                    <TableCell className="text-[var(--color-fg-default)]">
+                    <TableCell className="text-[var(--color-fg-default)] break-all">
                       {EslintRulesMeta?.[ruleName]?.docs?.url ? (
                         <a
                           href={EslintRulesMeta?.[ruleName]?.docs?.url ?? ""}
@@ -106,7 +99,7 @@ const TopErrorAndWarnings = () => {
                     key={ruleName}
                     className="border-b border-[var(--color-border-default)]"
                   >
-                    <TableCell className="text-[var(--color-fg-default)]">
+                    <TableCell className="text-[var(--color-fg-default)] break-all">
                       {EslintRulesMeta?.[ruleName]?.docs?.url ? (
                         <a
                           href={EslintRulesMeta?.[ruleName]?.docs?.url ?? ""}

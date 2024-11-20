@@ -25,7 +25,7 @@ import {
 import { useDetail } from "./detailContext";
 
 const ITEMS_PER_PAGE = 10;
-const PAGINATION_MARGIN = 3;
+const PAGINATION_MARGIN = window.innerWidth < 640 ? 2 : 3;
 
 const Details = () => {
   const [openFiles, setOpenFiles] = useState<string[]>([]);
@@ -148,12 +148,12 @@ const Details = () => {
             <span className="text-sm text-[var(--color-fg-muted)] mr-2">
               Search:
             </span>
-            <span className="text-sm text-[var(--color-fg-default)] font-medium">
+            <span className="text-sm text-[var(--color-fg-default)] font-medium break-all">
               {searchTerm}
             </span>
             <button
               onClick={() => changeSearchTerm("")}
-              className="ml-auto text-[var(--color-fg-muted)] hover:text-[var(--color-fg-default)]"
+              className="ml-auto text-[var(--color-fg-muted)] hover:text-[var(--color-fg-default)] ml-4"
             >
               <X className="h-4 w-4" />
             </button>
@@ -297,7 +297,7 @@ const Details = () => {
                                           </span>
                                         )}
                                       </div>
-                                      <p className="mt-2 text-sm text-[var(--color-fg-default)]">
+                                      <p className="mt-2 text-sm text-[var(--color-fg-default)] break-all">
                                         {messageInfo.message}
                                       </p>
                                     </div>
@@ -379,7 +379,7 @@ const Details = () => {
 
             {/* Pagination */}
             <div className="mt-4">
-              <Pagination>
+              <Pagination className="transform origin-center scale-[0.8] sm:scale-100">
                 <PaginationContent>
                   {detailsPage > viewingMinPage && (
                     <PaginationItem>

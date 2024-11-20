@@ -1,5 +1,9 @@
 # Galaxy ESLint Formatter
 
+<p align="center">
+  <img src="./docs/logo.png" alt="Galaxy ESLint Formatter Logo" width="200"/>
+</p>
+
 **Galaxy ESLint Formatter**는 [eslint-formatter-html](https://www.npmjs.com/package/eslint-formatter-html)을 포크하여 개발된 Galaxy 테마의 HTML 포맷터입니다. 이 라이브러리는 코드 오류와 경고를 우주 테마에 맞게 시각적으로 매력적으로 출력하여, 개발자가 문제를 보다 쉽게 인식하고 수정할 수 있도록 돕습니다.
 
 ## 설치
@@ -64,4 +68,4 @@ node generate-eslint-report.js
 - **Galaxy 테마에 맞춘 시각적 출력**: 코드 오류와 경고를 우주 테마에 맞게 스타일링하여, 개발자가 쉽게 인식할 수 있도록 합니다.
 - **HTML 형식으로 오류 및 경고 표시**: 결과를 HTML 파일로 출력하여, 브라우저에서 쉽게 확인할 수 있습니다.
 
-이 포맷터를 사용하여 코드 품질을 높이고, 개발 과정에서 발생하는 문제를 보다 효과적으로 관리해 보세요!
+![example](./docs/example.png)
