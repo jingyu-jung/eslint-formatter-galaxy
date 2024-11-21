@@ -1,6 +1,6 @@
 {
   "name": "eslint-formatter-galaxy",
-  "version": "0.6.4",
+  "version": "0.6.5",
   "description": "A ESLint formatter with a space theme",
   "main": "index.js",
   "keywords": [

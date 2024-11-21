@@ -19,48 +19,7 @@ npm install eslint-formatter-galaxy
 ESLint 설정 파일에서 Galaxy ESLint Formatter를 포맷터로 지정하여 사용할 수 있습니다. 아래의 명령어를 통해 ESLint를 실행하고, 포맷터를 적용하여 결과를 HTML 파일로 출력할 수 있습니다.
 
 ```bash
-# npm, pnpm, yarn (PnP 사용하지 않을 경우)
-eslint file.js --format node_modules/eslint-formatter-galaxy/index.js --output report.html
-```
-
-### Yarn PnP 사용 시
-
-Yarn PnP를 사용하는 경우, 다음과 같은 코드를 통해 ESLint 리포트를 생성할 수 있습니다:
-
-```javascript
-// generate-eslint-report.js
-const { exec } = require("child_process");
-const fs = require("fs");
-const path = require("path");
-const pnpApi = require("pnpapi");
-
-const getPackagePath = (packageName) => {
-  return pnpApi.resolveToUnqualified(packageName, process.cwd());
-};
-
-const generateEslintReport = () => {
-  const outputFilePath = path.resolve(process.cwd(), CONFIG.OUTPUT_FILE);
-  try {
-    const eslintFormatterPath = path.resolve(
-      getPackagePath(CONFIG.REPORTER.PACKAGE_NAME),
-      "./index.js"
-    );
-
-    exec(
-      `yarn eslint file.js --format ${eslintFormatterPath} --output report.html`,
-      { cwd: path.resolve(process.cwd()) }
-    );
-  } catch (error) {
-    console.error("Error generating ESLint report:", error);
-  }
-};
-
-generateEslintReport();
-```
-
-```bash
-# 스크립트를 실행합니다.
-node generate-eslint-report.js
+eslint file.js --format galaxy --output report.html
 ```
 
 ## 기능
